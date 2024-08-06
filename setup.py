@@ -80,6 +80,7 @@ class CMakeBuild(build_ext):
             f"-DCMAKE_BUILD_TYPE={cfg}",
             f"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY={extdir}",
             f"-DPYTHON_EXECUTABLE={sys.executable}",
+	    f"-DCMAKE_TOOLCHAIN_FILE=D:/Projects/Code/vcpkg/scripts/buildsystems/vcpkg.cmake",
         ]
         build_args = ["--target", os.path.basename(ext.name)]
 
